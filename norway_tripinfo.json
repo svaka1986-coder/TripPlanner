@@ -1,0 +1,440 @@
+﻿{
+  "schema_version": "2.0",
+  "trip_meta": {
+    "trip_name": "Norway Family Road Trip",
+    "year": 2026,
+    "start_location": "Espoo, Finland",
+    "end_location": "Espoo, Finland",
+    "start_date": "2026-07-13",
+    "end_date": "2026-07-23",
+    "countries": [
+      "Finland",
+      "Norway",
+      "Sweden"
+    ],
+    "notes": [
+      "Road trip optimized for two-family convoy travel with kids."
+    ]
+  },
+  "group": {
+    "families": [
+      {
+        "family_id": "Vaka",
+        "label": "Srikanth Family",
+        "adults": 2,
+        "kids_ages": [9]
+      },
+      {
+        "family_id": "Gopu",
+        "label": "Gopu Family",
+        "adults": 2,
+        "kids_ages": [10, 13]
+      }
+    ],
+    "totals": {
+      "adults": 4,
+      "kids": 3,
+      "travelers": 7
+    }
+  },
+  "convoy": {
+    "vehicles": [
+      {
+        "vehicle_id": "cr-v",
+        "role": "lead"
+      },
+      {
+        "vehicle_id": "yaris",
+        "role": "support"
+      }
+    ],
+    "communication": {
+      "walkie_talkies": true,
+      "phones": true,
+      "primary_channel": "phones"
+    }
+  },
+  "rules": {
+    "max_continuous_drive_minutes": 120,
+    "break_policy": "Break at least every 2 hours on long transit days.",
+    "kid_energy_reset_ideas": [
+      "100m sprint at rest areas",
+      "Short playground stop",
+      "Quick snack + hydration"
+    ]
+  },
+  "bookings": {
+    "ferries": [
+      {
+        "route": "Brensholmen to Botnhamn",
+        "day_reference": "day_07",
+        "status": "planned",
+        "notes": "Arrive 1 to 1.5 hours early."
+      }
+    ],
+    "stay_transitions": [
+      {
+        "day_reference": "day_03",
+        "checkout": "11:00",
+        "checkin": "15:00-16:00",
+        "notes": "Midday gap managed via M/S Malla boat trip."
+      }
+    ]
+  },
+  "emergency": {
+    "contacts": {
+      "eu_emergency_number": "112"
+    },
+    "trip_notes": [
+      "Keep emergency and insurance details available in both cars.",
+      "Add nearest medical facility per overnight stop before departure."
+    ]
+  },
+  "budget": {
+    "currency": "EUR",
+    "tracking_categories": [
+      "fuel",
+      "ferry",
+      "toll",
+      "food",
+      "activities",
+      "accommodation"
+    ],
+    "split_strategy": "TBD"
+  },
+  "days": [
+    {
+      "day_id": "day_01",
+      "day_ref": {
+        "type": "single",
+        "day": 1
+      },
+      "date": {
+        "label": "July 13",
+        "iso": "2026-07-13"
+      },
+      "title": "The Push to the Coast",
+      "route": "Espoo ➔ Jyväskylä ➔ Pyhäjärvi ➔ Kuivaniemi",
+      "drive": {
+        "summary": "~660 km | Approx. 7 hours of wheel time (Excludes stops)"
+      },
+      "stop_options": [
+        "Heinola Tähtihovi (~1.5 hrs from Espoo)",
+        "Toivakka Lakefront (~3 hrs from Espoo)",
+        "Vaskikello Clock Museum, Pyhäjärvi (~5.5 hrs from Espoo)"
+      ],
+      "activities": [
+        "Let the kids loose on the Heinola lakeside playground.",
+        "Run a 100m dash on the sandy shores at Toivakka to burn energy.",
+        "At Vaskikello, let the children actively pull ropes to ring massive bells outside."
+      ],
+      "photo_targets": [
+        "Standing underneath the giant world-record bells at Vaskikello",
+        "Kid toes dipped in the crystal lake at Toivakka"
+      ],
+      "food_plan": {
+        "self_prepared": "Pack a cooler with rye bread sandwich squares, fresh market peas to pop open, sliced apples, and juice boxes.",
+        "local_option": "Buy bowls of creamy Lohikeitto (salmon soup) for a warm comfort lunch inside the Vaskikello restaurant."
+      },
+      "logistics_notes": []
+    },
+    {
+      "day_id": "day_02",
+      "day_ref": {
+        "type": "single",
+        "day": 2
+      },
+      "date": {
+        "label": "July 14",
+        "iso": "2026-07-14"
+      },
+      "title": "Crossing into the Tundra",
+      "route": "Kuivaniemi ➔ Rovaniemi ➔ Muonio ➔ Kilpisjärvi",
+      "drive": {
+        "summary": "~370 km total | Approx. 4.5 hours of driving"
+      },
+      "stop_options": [
+        "Santa Claus Village, Arctic Circle (1 hr north of Kuivaniemi)",
+        "Muonio Riverbank Laavu (~3 hrs north of Rovaniemi)"
+      ],
+      "activities": [
+        "Cross the literal painted line on the ground marking the Arctic Circle.",
+        "Meet Santa Claus (free).",
+        "From Rovaniemi north, the lead car uses walkie-talkies to scout for reindeer standing on the warm asphalt."
+      ],
+      "photo_targets": [
+        "The family straddling the painted white Arctic Circle line",
+        "First roadside reindeer sightings from the car windows"
+      ],
+      "food_plan": {
+        "self_prepared": "Pull over at a public Finnish lean-to (laavu) in Muonio. Light a quick fire using public wood logs and grill Grillimakkara (large Finnish grilling sausages) served with sweet mustard.",
+        "local_option": "Grab local berry ice cream treats at Santa Claus Village."
+      },
+      "logistics_notes": []
+    },
+    {
+      "day_id": "day_03",
+      "day_ref": {
+        "type": "single",
+        "day": 3
+      },
+      "date": {
+        "label": "July 15",
+        "iso": "2026-07-15"
+      },
+      "title": "The Great Fell Exploration & The Midday Gap",
+      "route": "Short local drives around Kilpisjärvi",
+      "drive": {
+        "summary": "< 20 km local driving | 0 hours of highway travel"
+      },
+      "stop_options": [
+        "Malla-laiva Boat Pier (Kilpisjärven Retkeilykeskus shore)",
+        "Saana Fell Hiking Trailhead"
+      ],
+      "activities": [
+        "The Midday Gap Fix (10:00 AM – 1:00 PM): Take the M/S Malla boat across Lake Kilpisjärvi to Koltalahti.",
+        "Walk the easy, flat 3 km sand path to the Three-Nation Border Stone where Finland, Norway, and Sweden meet.",
+        "The kids can literally run in circles around three countries at once!",
+        "Return via the 1:00 PM boat."
+      ],
+      "photo_targets": [
+        "The families hugging the bright yellow concrete monument in the water at the Three-Nation Border",
+        "The sheer, sweeping cliffs of Saana Fell"
+      ],
+      "food_plan": {
+        "self_prepared": "Pack a backpack picnic for the boat trip containing Finnish Karelian pasties (Karjalanpiirakka), cheese slices, and hard-boiled eggs.",
+        "local_option": "Dinner in Cabin #2: Cook a big batch of 'Uudet perunat' (Finnish new potatoes) boiled with a massive bunch of fresh dill and tossed in real butter, paired with smoked fish from the local market."
+      },
+      "logistics_notes": [
+        "You checkout of property #1 at 11:00 AM and check into property #2 at 3:00/4:00 PM. Cars will be loaded with luggage during this gap. Use the plan below to perfectly manage the transition!"
+      ]
+    },
+    {
+      "day_id": "day_04",
+      "day_ref": {
+        "type": "single",
+        "day": 4
+      },
+      "date": {
+        "label": "July 16",
+        "iso": "2026-07-16"
+      },
+      "title": "Dropping into the Fjords",
+      "route": "Kilpisjärvi ➔ Rovijokfossen ➔ Tromsø",
+      "drive": {
+        "summary": "~170 km | Approx. 2.5 to 3 hours of mountain descent driving"
+      },
+      "stop_options": [
+        "Rovijokfossen Waterfall (Just past the Norwegian Border)",
+        "Tromsø Harbor front"
+      ],
+      "activities": [
+        "Take a short 15-minute boardwalk stroll to view the roaring, glacial waters of Rovijokfossen.",
+        "Watch the dramatic change from flat tundra to deep Norwegian sea valleys."
+      ],
+      "photo_targets": [
+        "The dramatic family 'Welcome to Norway' snapshot at the waterfall platform"
+      ],
+      "food_plan": {
+        "self_prepared": "Keep chocolate treats (Fazer Blue) in the glove compartment to keep energy levels high through the mountain curves.",
+        "local_option": "Arrive in Tromsø and take the kids to get a local Softis (creamy soft-serve ice cream rolled in crunchy almond brittle or salty licorice powder)."
+      },
+      "logistics_notes": []
+    },
+    {
+      "day_id": "day_05_06",
+      "day_ref": {
+        "type": "range",
+        "start_day": 5,
+        "end_day": 6
+      },
+      "date": {
+        "label": "July 17 & 18",
+        "iso_range": {
+          "start": "2026-07-17",
+          "end": "2026-07-18"
+        }
+      },
+      "title": "Island Capital Living",
+      "route": "Tromsø local sight-seeing (No highway driving)",
+      "drive": {
+        "summary": "0 km highway driving | Cars stay parked at your accommodation"
+      },
+      "stop_options": [
+        "Fjellheisen Cable Car Base Station",
+        "Tromsø Harbor Promenade"
+      ],
+      "activities": [
+        "Ride the Fjellheisen Cable Car up the ledge for a sprawling panoramic view of the islands under the endless Midnight Sun.",
+        "Walk along the wooden planks of the harbor to look at incoming fishing vessels."
+      ],
+      "photo_targets": [
+        "Looking directly down on Tromsø island from the mountain ledge at 10:00 PM in bright daylight"
+      ],
+      "food_plan": {
+        "self_prepared": "Pack a lightweight daycare bag with snack bars and fruit for the cable car deck.",
+        "local_option": "Stop by a local fishmonger or supermarket deli counter to buy warm Fiskekaker (savory, mild Norwegian fish cakes) to eat out of paper bags like a burger."
+      },
+      "logistics_notes": []
+    },
+    {
+      "day_id": "day_07",
+      "day_ref": {
+        "type": "single",
+        "day": 7
+      },
+      "date": {
+        "label": "July 19",
+        "iso": "2026-07-19"
+      },
+      "title": "Island Hopping to Senja",
+      "route": "Tromsø ➔ Brensholmen Ferry Quay ➔ (Ferry) ➔ Botnhamn ➔ Ersfjordstranda ➔ Gryllefjord",
+      "drive": {
+        "summary": "~140 km driving + 35-minute open-water ferry crossing | Approx. 2.5 hours total"
+      },
+      "stop_options": [
+        "Brensholmen Ferry Queue (Arrive 1 to 1.5 hours early!)",
+        "Ersfjordstranda Beach, Senja"
+      ],
+      "activities": [
+        "Let the kids scramble over the coastal boulders at the ferry queue.",
+        "Once on Senja, drive the National Tourist Route.",
+        "Pull over at Ersfjordstranda so the children can build sandcastles on fine white sand.",
+        "Check out the golden, architectural public restroom structure."
+      ],
+      "photo_targets": [
+        "Razor-sharp jagged mountain peaks framing the bright white beach sand at Ersfjord"
+      ],
+      "food_plan": {
+        "self_prepared": "Bring an onboard thermos of hot chocolate and travel mugs to sip on the windy ferry deck.",
+        "local_option": "Buy a block of Brunost (caramelized Norwegian brown cheese) at a Kiwi or REMA 1000 store to shave onto local thin waffles for a roadside picnic."
+      },
+      "logistics_notes": []
+    },
+    {
+      "day_id": "day_08",
+      "day_ref": {
+        "type": "single",
+        "day": 8
+      },
+      "date": {
+        "label": "July 20",
+        "iso": "2026-07-20"
+      },
+      "title": "Wild Senja",
+      "route": "Gryllefjord ➔ Winding local fjord routes ➔ Gryllefjord",
+      "drive": {
+        "summary": "Flexible local driving | Under 50 km total"
+      },
+      "stop_options": [
+        "Tungeneset Walkway (Rock tongue view)",
+        "Local Senja Marshlands"
+      ],
+      "activities": [
+        "Take a slow, restorative rest day.",
+        "Explore the quiet fishing village of Gryllefjord on foot.",
+        "Peer into the local roadside marshes with the kids to spot wild Molte (Arctic cloudberries, 'Arctic Gold')."
+      ],
+      "photo_targets": [
+        "The wooden boardwalk leading out to sweeping views of the open ocean and rocky points"
+      ],
+      "food_plan": {
+        "self_prepared": "Assemble a home-cooked dinner back at the FeelSenja Holiday House. Fry up some fresh Arctic Char or salmon bought from the town harbor.",
+        "local_option": "Sweet Treat: Top small bowls of vanilla ice cream with cloudberry jam."
+      },
+      "logistics_notes": []
+    },
+    {
+      "day_id": "day_09",
+      "day_ref": {
+        "type": "single",
+        "day": 9
+      },
+      "date": {
+        "label": "July 21",
+        "iso": "2026-07-21"
+      },
+      "title": "The Grand Return Cross-Border Haul",
+      "route": "Gryllefjord ➔ Narvik/Kiruna bypass ➔ Koivuharju (Kemi, Finland)",
+      "drive": {
+        "summary": "~520 km | Approx. 7 to 7.5 hours of endurance driving"
+      },
+      "stop_options": [
+        "Swedish Lapland Border Rest Stops (Every 2 hours)",
+        "Torne River Valley rest pull-offs"
+      ],
+      "activities": [
+        "Strict 2-Hour Rule: Break this long drive up aggressively.",
+        "Stop at every second inland rest station to let the kids run a 100m sprint.",
+        "Ensure your AutoPASS account is activated for the automated toll gates as you leave Norway."
+      ],
+      "photo_targets": [
+        "The gradual leveling of the earth as mountains smooth down into endless pine forests"
+      ],
+      "food_plan": {
+        "self_prepared": "This is a long transit day; prepare ham and cheese rolls, carrot sticks, and crackers in the morning. Keep individual bags of candy or Fazer chocolates handy for a morale boost in both cars.",
+        "local_option": null
+      },
+      "logistics_notes": []
+    },
+    {
+      "day_id": "day_10",
+      "day_ref": {
+        "type": "single",
+        "day": 10
+      },
+      "date": {
+        "label": "July 22",
+        "iso": "2026-07-22"
+      },
+      "title": "Coastal Relaxing & Wildlife",
+      "route": "Kemi ➔ Ranua Wildlife Park ➔ E75 Highway south ➔ Highway side-stops",
+      "drive": {
+        "summary": "~700 km highway stretch | Approx. 7.5 hours total driving"
+      },
+      "stop_options": [
+        "Ranua Wildlife Park (1 hour east detour from your route)",
+        "Central Finland Highway Rest Areas"
+      ],
+      "activities": [
+        "Walk the beautiful 2.8 km wooden forest boardwalk at Ranua.",
+        "Kids can see polar bears, wolves, lynx, and massive moose up close in natural enclosures.",
+        "This long walk will guarantee they sleep soundly for the final highway legs."
+      ],
+      "photo_targets": [
+        "Looking down from the wooden boardwalks directly at a sleeping polar bear or a massive elk"
+      ],
+      "food_plan": {
+        "self_prepared": "Clear out the remainder of your cooler box items during the afternoon highway stops.",
+        "local_option": "Grab lunch at the Ranua Wildlife Park restaurant courtyard."
+      },
+      "logistics_notes": []
+    },
+    {
+      "day_id": "day_11",
+      "day_ref": {
+        "type": "single",
+        "day": 11
+      },
+      "date": {
+        "label": "July 23",
+        "iso": "2026-07-23"
+      },
+      "title": "Trip Completion",
+      "route": "Final highway tracking into Espoo",
+      "drive": {
+        "summary": "Final arrival stretch home to Espoo"
+      },
+      "stop_options": [],
+      "activities": [
+        "Keep the walkie-talkies running so the kids can play one last trivia game or share their favorite memories car-to-car as you reach town."
+      ],
+      "photo_targets": [],
+      "food_plan": {
+        "self_prepared": "Enjoy the last of your portable car snacks as you close out the loop.",
+        "local_option": null
+      },
+      "logistics_notes": []
+    }
+  ]
+}

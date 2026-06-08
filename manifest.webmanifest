@@ -1,0 +1,18 @@
+{
+  "name": "Norway Family Trip Dashboard",
+  "short_name": "TripDash",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f2ea",
+  "theme_color": "#c94f2d",
+  "description": "Offline-friendly dashboard for two-family road trip planning and convoy coordination.",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#c94f2d" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <title>Norway Trip Dashboard</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-shape shape-a"></div>
+    <div class="bg-shape shape-b"></div>
+
+    <header class="hero">
+      <p class="kicker">Family Convoy Trip Assistant</p>
+      <h1 id="tripTitle">Loading trip...</h1>
+      <p id="tripMeta" class="meta"></p>
+    </header>
+
+    <main class="layout">
+      <section class="panel convoy-panel">
+        <h2>Convoy Mode</h2>
+        <p class="muted">Quick car status updates. Saved on this device.</p>
+        <div id="convoyStatus" class="convoy-grid"></div>
+      </section>
+
+      <section class="panel checklist-panel">
+        <h2>Shared Checklist</h2>
+        <p class="muted">Use for pre-drive routines and daily essentials.</p>
+        <div id="sharedChecklist"></div>
+      </section>
+
+      <section class="panel expense-panel">
+        <h2>Expense Tracker</h2>
+        <p class="muted">Tracks costs by your trip budget categories. Saved on this device.</p>
+        <form id="expenseForm" class="expense-form">
+          <label>
+            Category
+            <select id="expenseCategory"></select>
+          </label>
+          <label>
+            Amount (EUR)
+            <input id="expenseAmount" type="number" min="0" step="0.01" required />
+          </label>
+          <label>
+            Note
+            <input id="expenseNote" type="text" placeholder="Fuel at station X" />
+          </label>
+          <label>
+            Split Mode
+            <select id="expenseSplitMode">
+              <option value="equal">Equal by family</option>
+              <option value="family">Single family pays</option>
+              <option value="custom">Custom % split</option>
+            </select>
+          </label>
+          <label>
+            Family (for single payer)
+            <select id="expenseFamily"></select>
+          </label>
+          <label>
+            Custom Split (%)
+            <input id="expenseCustomSplit" type="text" placeholder="Vaka:40,Gopu:60" />
+          </label>
+          <button type="submit">Add Expense</button>
+        </form>
+        <div class="expense-toolbar">
+          <button id="exportCsvBtn" type="button">Export CSV</button>
+          <button id="exportTripJsonBtn" type="button">Export Updated Trip JSON</button>
+        </div>
+        <p id="syncStatus" class="muted"></p>
+        <p id="expenseTotal" class="expense-total"></p>
+        <div id="familySplitSummary" class="split-summary"></div>
+        <ul id="expenseList" class="expense-list"></ul>
+      </section>
+
+      <section class="panel booking-panel">
+        <h2>Bookings & Reminders</h2>
+        <p class="muted">Ferry and stay transitions with quick reminder badges.</p>
+        <div id="bookingCards" class="booking-cards"></div>
+      </section>
+
+      <section class="panel days-panel">
+        <div class="days-header">
+          <h2>Day Planner</h2>
+          <div class="days-actions">
+            <label>
+              Jump to day
+              <select id="dayPicker"></select>
+            </label>
+            <button id="printBriefBtn" type="button">Print Day Brief</button>
+          </div>
+        </div>
+        <div id="dayCardContainer"></div>
+      </section>
+    </main>
+
+    <template id="statusCardTemplate">
+      <article class="status-card">
+        <h3></h3>
+        <p class="status-value"></p>
+        <div class="status-actions">
+          <button data-status="Departed">Departed</button>
+          <button data-status="Stopping">Stopping</button>
+          <button data-status="Need break">Need break</button>
+          <button data-status="Arrived">Arrived</button>
+        </div>
+      </article>
+    </template>
+
+    <template id="dayCardTemplate">
+      <article class="day-card">
+        <div class="day-head">
+          <h3 class="day-title"></h3>
+          <p class="day-date"></p>
+        </div>
+        <p class="route"></p>
+        <p class="drive"></p>
+
+        <div class="day-columns">
+          <section>
+            <h4>Stop Options</h4>
+            <ul class="stops"></ul>
+          </section>
+          <section>
+            <h4>Activities</h4>
+            <ul class="activities"></ul>
+          </section>
+        </div>
+
+        <section>
+          <h4>Food Plan</h4>
+          <p class="food"></p>
+        </section>
+
+        <section>
+          <h4>Map Links</h4>
+          <div class="map-links"></div>
+        </section>
+
+        <section>
+          <h4>Day Checklist</h4>
+          <div class="day-checklist"></div>
+        </section>
+      </article>
+    </template>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
